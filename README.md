@@ -18,5 +18,6 @@ https://stackoverflow.com/questions/20457290/installing-r-with-homebrew
 ## 실습 Overview
 | 날짜   |      실습 내용      |
 |----------|:-------------:|
-| 2019/09/10  | R 기초 (데이터 타입 및 데이터 타입 활용) |
+| 2019/09/10 | R 기초 (데이터 타입 및 데이터 타입 활용) |
+| 2019/09/11 | R 기초 Lab + R 주요 데이터 구조(Vector, Matrix) |
 
