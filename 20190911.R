@@ -56,9 +56,20 @@ c(TRUE, TRUE, FALSE, FALSE) | c(TRUE, FALSE, TRUE, FALSE)
 #5 벡터의 합계를 산출하는 sum() 함수와 논리 연산을 이용하여, 1에서 100까지의 정수 가운데 7의 배수인 정수의 개수를 구하시오.
 a <- 1:100
 b <- as.logical(a %% 7 == 0)
+sum(1:100%%7==0)
 sum(b)
 
 #6 주사위를 일곱 번 던져서 나온 3,2,5,1,5,6,5의 값을 1,2,3,4,5,6의 레벨을 갖는 팩터로 저장하고 레벨의 이름은
 #one, two, three, four, five, siz로 이름을 부여하시오. 
 f = factor(c(3, 2, 5, 1, 5, 6, 5), levels=c(1, 2, 3, 4, 5, 6), labels=c("one", "two", "three", "four", "five", "six"))
 f
+
+#7
+heights = c(1.79, 1.61, 1.65, 1.85, 1.58)
+weights = c(75, 72, 60, 100, 65)
+
+bmi = weights/(heights**2)
+
+subset(weights, bmi > 25)
+weights[bmi > 25]
+weights[which(bmi > 25)]
