@@ -21,4 +21,12 @@ https://stackoverflow.com/questions/20457290/installing-r-with-homebrew
 | 2019/09/10 | R 기초 (데이터 타입 및 데이터 타입 활용) |
 | 2019/09/11 | R 기초 Lab + R 주요 데이터 구조(Vector, Matrix) |
 | 2019/09/17 | R 기초 Lab (Array, Data.Frame, Data.Table, List) |
+| 2019/09/18 | 객체 파일 입출력 + Apply 함수 |
+| 2019/09/24 | Apply, Subset, Sort, Split |
+| 2019/09/25 | With, Within 함수 + LAB |
+| 2019/10/09 | dplyr 패키지 사용법 |
+| 2019/10/15 | sqldf 패키지 사용법 |
+| 2019/10/16 | 중간고사 대비 LAB |
+| 2019/10/29 | 제어문(if, for, while, repeat) |
+| 2019/10/30 | 함수 사용, 스코프, Call by Reference |
 
