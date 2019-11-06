@@ -35,6 +35,10 @@ repeat {
 }
 
 # 짝수만 출력 with next
+for (i in seq(2, 10, by=2)) {
+  print(i)
+}
+
 i <- 0
 while (i <= 9) {
   i <- i+1
@@ -44,6 +48,21 @@ while (i <= 9) {
   print(i)
 }
 
+i <- 0
+repeat {
+  i <- i+1
+  if (i > 9) {
+    break
+  }
+
+  if (i %% 2 != 0) {
+    next
+  }
+
+  print(i)
+}
+
+?paste
 # 제어문 Lab
 # 1. 구구단을 출력하는 프로그램을 for 문을 사용하여 작성하시오.
 for (i in 1:9) {

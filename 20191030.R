@@ -100,3 +100,155 @@ my_max(c(1, 5, 3))
 my_max(1:100)
 
 # 문법적 스코프
+n <- 1
+f <- function() {
+  print(n)
+}
+f()
+n <- 2
+f()
+
+# 전역 변수와 같은 이름의 지역 변수를 사용하면, 함수 내부의 지역 변수가 우선
+n <- 100
+f <- function() {
+  n <- 1
+  print(n)
+}
+f()
+
+rm(list=ls())
+f <- function() {
+  print(n)
+}
+f()
+
+# 함수 내부에서 정의한 이름은 함수 바깥에서 접근할 수 없음
+rm(list=ls())
+f <- function() {
+  n <- 1
+}
+f()
+n
+
+# 함수 인자의 변수명도 전역 변수보다 우선함
+n <- 100
+f <- function(n) {
+  print(n)
+}
+f(1)
+
+# 중첩 함수에도 같은 규칙 적용
+f <- function(x) {
+  a <- 2
+  g <- function(y) {
+    print(y+a)
+  }
+  g(x)
+}
+f(1)
+
+# f()에 변수 a가 없으면 전역 변수 사용
+a <- 100
+f <- function(x) {
+  g <- function(y) {
+    print(y+a)
+  }
+  g(x)
+}
+f(1)
+
+# 내부 블록에서 외부 블록에 선언된 값을 수정할 때 주의 필요
+f <- function() {
+  a <- 1
+  g <- function() {
+    a <<- 2
+    print(a)
+  }
+  g()
+  print(a)
+}
+f()
+
+# 값에 의한 전달
+f <- function(df2) {
+  df$a <- c(1,2,3)
+}
+df <- data.frame(a=c(4,5,6))
+f(df)
+df
+
+f <- function(df2) {
+  df$a <- c(1,2,3)
+  return(df)
+}
+df <- data.frame(a=c(4,5,6))
+df <- f(df)
+df
+
+##
+# Scope Lab
+##
+
+# 1. 전역변수 a, b, c를 선언하고 각각의 값을 1, 2, 3으로 할당하시 오.
+a <- 1
+b <- 2
+c <- 3
+
+# 2. 함수 f()를 정의하시오. 함수 f()는 인수는 없고,
+# 내부적으로 a, b, c 변수와 내부에 g() 함수를 가진다.
+# f() 함수에서 a, b, c 값은 4, 5, 6을 가진다.
+# f()에 포함되어 있는 g()도 a,b,c 변수를 가지고 값은 7,8,9를 가진다.
+
+f <- function() {
+  a <- 4
+  b <- 5
+  c <- 6
+
+  g <- function() {
+    a <- 7
+    b <- 8
+    c <- 9
+  }
+}
+f()
+a
+b
+c
+
+# 3. 앞의 코드와 같이 f()를 실행한 후의 전역변수 a, b, c 값은 1,2,3이다.
+# f() 실행 후 전역변수 a, b, c의 값이 4,5,6이 되도록 코드를 변경하시오.
+
+f <- function() {
+  a <<- 4
+  b <<- 5
+  c <<- 6
+  
+  g <- function() {
+    a <- 7
+    b <- 8
+    c <- 9
+  }
+}
+f()
+a
+b
+c
+
+# 4. 또 f() 실행 후 전역변수 a, b, c의 값이 7,8,9이 되도록 코드를 변경하시오. [???]
+
+f <- function() {
+  a <<- 4
+  b <<- 5
+  c <<- 6
+  
+  g <- function() {
+    a <<- 7
+    b <<- 8
+    c <<- 9
+  }
+  g()
+}
+f()
+a
+b
+c
