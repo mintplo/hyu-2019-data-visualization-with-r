@@ -30,4 +30,5 @@ https://stackoverflow.com/questions/20457290/installing-r-with-homebrew
 | 2019/10/29 | 제어문(if, for, while, repeat) |
 | 2019/10/30 | 함수 사용, 스코프, Call by Reference |
 | 2019/11/06 | ggplot2 기초 + plot graph |
+| 2019/11/12 | plot, points, abline, curve |
 
