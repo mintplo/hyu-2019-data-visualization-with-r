@@ -31,4 +31,8 @@ https://stackoverflow.com/questions/20457290/installing-r-with-homebrew
 | 2019/10/30 | 함수 사용, 스코프, Call by Reference |
 | 2019/11/06 | ggplot2 기초 + plot graph |
 | 2019/11/12 | plot, points, abline, curve |
-
+| 2019/11/13 | curve, polygon, 선형회귀, text, identify, legend |
+| 2019/11/19 | boxplot, histogram, density, barplot |
+| 2019/11/20 | pie, mosaicplot, pairs, persp, contour |
+| 2019/11/26 | ggplot2 Basic |
+| 2019/11/27 | ggplot2 Advanced |
