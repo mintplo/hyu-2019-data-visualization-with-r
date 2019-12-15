@@ -85,18 +85,3 @@ air_reg <- lm(Wind~Temp, data=airquality)
 air_reg <- lm(airquality$Wind~airquality$Temp)
 summary(air_reg)
 abline(reg=air_reg, col="blue")
-
-# 곡선(curve)
-curve(sin, 0, 2*pi)
-
-# curve Lab
-# 1. curve() 함수를 사용하여 [0, 2𝜋] 구간에서 cos 함수를 그리 시오.
-# § 단 선의 색상은 파랑색으로, 선의 종류는 점선으로 하시오.
-curve(cos, 0, 2*pi, col="blue", lty=2)
-
-# 2. curve() 함수를 사용하여 exponential 함수를 [-1,1] 구간에서 그리시오.
-curve(, -1, 1)
-
-
-
-
