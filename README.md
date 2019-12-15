@@ -36,3 +36,13 @@ https://stackoverflow.com/questions/20457290/installing-r-with-homebrew
 | 2019/11/20 | pie, mosaicplot, pairs, persp, contour |
 | 2019/11/26 | ggplot2 Basic |
 | 2019/11/27 | ggplot2 Advanced |
+
+&nbsp;
+--------
+
+The source code of *mintplo* is primarily distributed under the terms
+of the [GNU Affero General Public License v3.0] or any later version. See
+[COPYRIGHT] for details.
+
+[GNU Affero General Public License v3.0]: LICENSE
+[COPYRIGHT]: COPYRIGHT
